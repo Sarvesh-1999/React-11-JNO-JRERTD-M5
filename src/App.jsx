@@ -6,6 +6,8 @@ import Counter from "./AllTopics/02_States/Counter";
 import StateTask1 from "./AllTopics/02_States/StatesTask1";
 import StatesInCBC from "./AllTopics/02_States/StatesInCBC";
 import PropsParent from "./AllTopics/03_Props/PropsParent";
+import ChildrenProps from "./AllTopics/04_ChildrenProps/ChildrenProps";
+import { useState } from "react";
 
 const App = () => {
   return (
@@ -17,7 +19,8 @@ const App = () => {
       {/* <Counter /> */}
       {/* <StateTask1 /> */}
       {/* <StatesInCBC /> */}
-      <PropsParent />
+      {/* <PropsParent /> */}
+      <ChildrenProps />
     </>
   );
 };
