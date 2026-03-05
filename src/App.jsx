@@ -7,7 +7,11 @@ import StateTask1 from "./AllTopics/02_States/StatesTask1";
 import StatesInCBC from "./AllTopics/02_States/StatesInCBC";
 import PropsParent from "./AllTopics/03_Props/PropsParent";
 import ChildrenProps from "./AllTopics/04_ChildrenProps/ChildrenProps";
-import { useState } from "react";
+import ChildrenProps2 from "./AllTopics/04_ChildrenProps/ChildrenProps2";
+import Child1 from "./AllTopics/04_ChildrenProps/Child1";
+import Child2 from "./AllTopics/04_ChildrenProps/Child2";
+import UpliftingParent from "./AllTopics/05_StateUplifting/UpliftingParent";
+import DrillingParent from "./AllTopics/06_PropsDrilling/DrillingParent";
 
 const App = () => {
   return (
@@ -20,7 +24,16 @@ const App = () => {
       {/* <StateTask1 /> */}
       {/* <StatesInCBC /> */}
       {/* <PropsParent /> */}
-      <ChildrenProps />
+      {/* <ChildrenProps /> */}
+
+      {/* <ChildrenProps2>
+        <Child1 />
+        <Child2 />
+      </ChildrenProps2> */}
+
+      {/* <UpliftingParent /> */}
+
+      <DrillingParent />
     </>
   );
 };
