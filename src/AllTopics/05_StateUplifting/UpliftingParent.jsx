@@ -4,6 +4,7 @@ import UpliftingChildB from "./UpliftingChildB";
 
 const UpliftingParent = () => {
   const [count, setCount] = useState(0);
+  
   const handleIncrement = () => setCount((prev) => prev + 1);
 
   return (

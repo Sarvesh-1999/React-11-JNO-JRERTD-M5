@@ -12,6 +12,8 @@ import Child1 from "./AllTopics/04_ChildrenProps/Child1";
 import Child2 from "./AllTopics/04_ChildrenProps/Child2";
 import UpliftingParent from "./AllTopics/05_StateUplifting/UpliftingParent";
 import DrillingParent from "./AllTopics/06_PropsDrilling/DrillingParent";
+import ContextParent from "./AllTopics/07_Context/ContextParent";
+import ContextProvider from "./AllTopics/07_Context/ContextProvider";
 
 const App = () => {
   return (
@@ -32,8 +34,13 @@ const App = () => {
       </ChildrenProps2> */}
 
       {/* <UpliftingParent /> */}
+      {/* <DrillingParent /> */}
 
-      <DrillingParent />
+      <ContextProvider>
+        <ContextParent />
+      </ContextProvider>
+
+      
     </>
   );
 };
