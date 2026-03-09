@@ -14,6 +14,7 @@ import UpliftingParent from "./AllTopics/05_StateUplifting/UpliftingParent";
 import DrillingParent from "./AllTopics/06_PropsDrilling/DrillingParent";
 import ContextParent from "./AllTopics/07_Context/ContextParent";
 import ContextProvider from "./AllTopics/07_Context/ContextProvider";
+import ControlledForms1 from "./AllTopics/08_Forms/ControlledForms1";
 
 const App = () => {
   return (
@@ -36,11 +37,11 @@ const App = () => {
       {/* <UpliftingParent /> */}
       {/* <DrillingParent /> */}
 
-      <ContextProvider>
+      {/* <ContextProvider>
         <ContextParent />
-      </ContextProvider>
+      </ContextProvider> */}
 
-      
+      <ControlledForms1 />
     </>
   );
 };
