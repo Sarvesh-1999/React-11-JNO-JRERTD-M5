@@ -15,6 +15,7 @@ import DrillingParent from "./AllTopics/06_PropsDrilling/DrillingParent";
 import ContextParent from "./AllTopics/07_Context/ContextParent";
 import ContextProvider from "./AllTopics/07_Context/ContextProvider";
 import ControlledForms1 from "./AllTopics/08_Forms/ControlledForms1";
+import ControlledForms2 from "./AllTopics/08_Forms/ControlledForms2";
 
 const App = () => {
   return (
@@ -41,7 +42,9 @@ const App = () => {
         <ContextParent />
       </ContextProvider> */}
 
-      <ControlledForms1 />
+      {/* <ControlledForms1 /> */}
+
+      <ControlledForms2 />
     </>
   );
 };
