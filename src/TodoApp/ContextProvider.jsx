@@ -26,11 +26,30 @@ const ContextProvider = (props) => {
     setNewTodo("");
   };
 
-  const removeTodo = () => {};
+  const removeTodo = (id) => {
+    let allTodos = [...todos];
+    let filteredTodo = allTodos.filter((ele) => ele.id !== id);
+    setAllTodos(filteredTodo);
+  };
+
+  const editTodo = (id) => {
+    let allTodos = [...todos]
+    let todoToBeEdit = allTodos.find((ele) => ele.id === id)
+    setNewTodo(todoToBeEdit.text)
+    removeTodo(id)
+  };
 
   return (
     <todoContext.Provider
-      value={{ newTodo, setNewTodo, todos, setAllTodos, addTodo, removeTodo }}
+      value={{
+        newTodo,
+        setNewTodo,
+        todos,
+        setAllTodos,
+        addTodo,
+        removeTodo,
+        editTodo,
+      }}
     >
       {props.children}
     </todoContext.Provider>
