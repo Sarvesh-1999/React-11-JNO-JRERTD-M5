@@ -19,6 +19,8 @@ import ControlledForms2 from "./AllTopics/08_Forms/ControlledForms2";
 import TodoWrapper from "./TodoApp/TodoWrapper";
 import TodoContextProvider from "./TodoApp/ContextProvider";
 import ReactCss from "./AllTopics/09_ReactCss/ReactCss";
+import TailwindPractice1 from "./AllTopics/10_TailwindCss/TailwindPractice1";
+import UncontrolledForms from "./AllTopics/08_Forms/UncontrolledForms";
 
 const App = () => {
   return (
@@ -52,6 +54,10 @@ const App = () => {
       </TodoContextProvider> */}
 
       {/* <ReactCss /> */}
+
+      {/* <TailwindPractice1 /> */}
+
+      <UncontrolledForms />
     </>
   );
 };
