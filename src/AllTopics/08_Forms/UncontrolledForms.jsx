@@ -8,9 +8,6 @@ const UncontrolledForms = () => {
     e.preventDefault();
     console.log("Form Submmitted");
 
-    // console.log(emailRef.current.value);
-    // console.log(passwordRef.current.value);
-
     let user = {
       email: emailRef.current.value,
       password: passwordRef.current.value,
