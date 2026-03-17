@@ -24,6 +24,7 @@ import UncontrolledForms from "./AllTopics/08_Forms/UncontrolledForms";
 import LifeCycleInCbc from "./AllTopics/11_LifeCycle/LifeCycleInCbc";
 import { useState } from "react";
 import LifeCycleInFbc from "./AllTopics/11_LifeCycle/LifeCycleInFbc";
+import Todos from "./AllTopics/12_Fetch/Todos";
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
@@ -69,6 +70,8 @@ const App = () => {
       {toggle && <LifeCycleInCbc />} */}
 
       {/* <LifeCycleInFbc /> */}
+
+      <Todos />
     </>
   );
 };
