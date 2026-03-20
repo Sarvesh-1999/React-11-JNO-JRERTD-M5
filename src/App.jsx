@@ -30,6 +30,7 @@ import ReducerTodo from "./AllTopics/13_Reducer/ReducerTodo";
 import Users from "./AllTopics/14_CustomHook/Users";
 import MemoExample from "./AllTopics/15_MemoAndCallback/MemoExample";
 import Dashboard from "./AllTopics/16_Routing/Dashboard";
+import ParentHoc from "./AllTopics/17_Hoc/ParentHoc";
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
@@ -87,6 +88,8 @@ const App = () => {
       {/* <MemoExample /> */}
 
       <Dashboard />
+
+      {/* <ParentHoc /> */}
     </>
   );
 };
