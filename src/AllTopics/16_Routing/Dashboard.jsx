@@ -1,31 +1,11 @@
-// import Nav from "./Nav";
-// import Home from "./Home";
-// import About from "./About";
-// import { useState } from "react";
-
-// const Dashboard = () => {
-//   const [path, setPath] = useState("/");
-//   return (
-//     <div>
-//       <Nav setPath={setPath} />
-
-//       {path === "/" && <Home />}
-//       {path === "/about" && <About />}
-//     </div>
-//   );
-// };
-
-// export default Dashboard;
-
-// ! USING ROUTING - REACT ROUTER DOM
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from "./Nav";
 import Home from "./Home";
 import About from "./About";
-import Nav from "./Nav";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Dashboard = () => {
   return (
-    <>
+    <div>
       <BrowserRouter>
         <Nav />
         <Routes>
@@ -33,7 +13,7 @@ const Dashboard = () => {
           <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 };
 

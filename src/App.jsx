@@ -31,6 +31,7 @@ import Users from "./AllTopics/14_CustomHook/Users";
 import MemoExample from "./AllTopics/15_MemoAndCallback/MemoExample";
 import Dashboard from "./AllTopics/16_Routing/Dashboard";
 import ParentHoc from "./AllTopics/17_Hoc/ParentHoc";
+import Routing2 from "./AllTopics/16_Routing/Routing2";
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
@@ -87,7 +88,9 @@ const App = () => {
 
       {/* <MemoExample /> */}
 
-      <Dashboard />
+      {/* <Dashboard /> */}
+
+      <Routing2 />
 
       {/* <ParentHoc /> */}
     </>

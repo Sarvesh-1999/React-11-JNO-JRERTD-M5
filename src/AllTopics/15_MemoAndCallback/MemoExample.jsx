@@ -5,10 +5,10 @@ const MemoExample = () => {
   const [add, setAdd] = useState(0);
   const [minus, setMinus] = useState(100);
 
-  //   function multiply() {
-  //     console.log("I am Multiply");
-  //     return add * 5;
-  //   }
+  // function multiply() {
+  //   console.log("I am Multiply");
+  //   return add * 5;
+  // }
 
   //! it returns memoized value
   let multiply = useMemo(() => {
@@ -16,10 +16,14 @@ const MemoExample = () => {
     return add * 5;
   }, [add]);
 
+  // function display() {
+  //   console.log("I am display");
+  // }
+
   //! it returns memoized function
   const display = useCallback(() => {
     console.log("I am display");
-  }, []); 
+  }, []);
 
   return (
     <div className="text-center p-5">
