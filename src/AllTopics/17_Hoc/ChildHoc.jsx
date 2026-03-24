@@ -1,15 +1,15 @@
-import HOC from "./Hoc";
+import Hoc from "./Hoc";
 
 const ChildHoc = (props) => {
-  console.log(props); // {}
-
+  console.log(props);
+  
   return (
-    <div>
+    <div className="text-center p-5">
       <h1 className="font-bold text-4xl my-5">
-        Child Component
+        Child Hoc
       </h1>
     </div>
   );
 };
 
-export default HOC(ChildHoc);
+export default Hoc(ChildHoc);

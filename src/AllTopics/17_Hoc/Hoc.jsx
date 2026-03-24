@@ -1,5 +1,5 @@
-const HOC = (Wrapper) => {
-  let data = "Hello WOrld";
+const Hoc = (Wrapper) => {
+  let data = "Hii";
 
   return () => {
     return <Wrapper data={data} />;
@@ -7,4 +7,4 @@ const HOC = (Wrapper) => {
   
 };
 
-export default HOC;
+export default Hoc;

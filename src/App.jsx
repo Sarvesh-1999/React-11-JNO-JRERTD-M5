@@ -32,6 +32,7 @@ import MemoExample from "./AllTopics/15_MemoAndCallback/MemoExample";
 import Dashboard from "./AllTopics/16_Routing/Dashboard";
 import ParentHoc from "./AllTopics/17_Hoc/ParentHoc";
 import Routing2 from "./AllTopics/16_Routing/Routing2";
+import ReduxCounter from "./AllTopics/18_Redux/ReduxCounter";
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
@@ -90,9 +91,11 @@ const App = () => {
 
       {/* <Dashboard /> */}
 
-      <Routing2 />
+      {/* <Routing2 /> */}
 
       {/* <ParentHoc /> */}
+
+      <ReduxCounter/>
     </>
   );
 };
