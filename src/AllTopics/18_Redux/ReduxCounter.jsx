@@ -8,7 +8,8 @@ const counterSlice = createSlice({
   initialState: 0,
   reducers: {
     incre: (prevState, action) => {
-      return prevState + 1;
+      console.log(action); // {type : "counter/incre" , payload: 10}
+      return prevState + action.payload;
     },
     decre: (prevState, action) => {
       return prevState - 1;
@@ -18,6 +19,8 @@ const counterSlice = createSlice({
     },
   },
 });
+
+export let { incre, decre, reset } = counterSlice.actions;
 
 //! STEP 1: create a store
 const myStore = configureStore({
