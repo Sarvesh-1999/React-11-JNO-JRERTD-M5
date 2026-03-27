@@ -23,7 +23,9 @@ const Navbar = () => {
         {token ? (
           <>
             <Link to={"/"}>Dashboard</Link>
-            <div onClick={handleLogout}>Logout</div>
+            <div onClick={handleLogout} className="cursor-pointer">
+              Logout
+            </div>
           </>
         ) : (
           <>
