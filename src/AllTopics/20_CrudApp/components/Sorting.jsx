@@ -1,14 +1,15 @@
 const Sorting = ({ sortBy, setSortBy }) => {
   return (
     <>
-      <label htmlFor="sort">Sort</label>
+    
       <select
-        className="border"
+        className="outline-0"
         id="sort"
         name="sort"
         value={sortBy}
         onChange={(e) => setSortBy(e.target.value)}
       >
+        <option value="" disabled selected>Sort</option>
         <option value="">All</option>
         <option value="title">Title</option>
         <option value="views">Views</option>
