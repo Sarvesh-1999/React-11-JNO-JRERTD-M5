@@ -4,6 +4,7 @@ import Sorting from "../components/Sorting";
 import Pagination from "../components/Pagination";
 import { usePosts } from "../hooks/usePosts";
 import { useDebounce } from "../hooks/useDebounce";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const [query, setQuery] = useState("");
@@ -16,11 +17,15 @@ const Dashboard = () => {
   return (
     <section className="min-h-screen bg-gray-100 pt-20 px-4 md:px-10">
       {/* HEADER */}
-      <header className="my-6">
-        <h1 className="text-xl font-bold text-gray-800">Dashboard</h1>
-        <p className="text-gray-500 text-sm">
-          Manage and explore posts efficiently
-        </p>
+      <header className="my-6 flex items-center justify-between">
+        <div>
+          <h1 className="text-xl font-bold text-gray-800">Dashboard</h1>
+          <p className="text-gray-500 text-sm">
+            Manage and explore posts efficiently
+          </p>
+        </div>
+
+       
       </header>
 
       {/* CONTROLS */}
