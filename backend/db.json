@@ -17,6 +17,36 @@
       "email": "utk@gmail.com",
       "password": "123",
       "id": "7-LB4CzJTXg"
+    },
+    {
+      "username": "Test",
+      "email": "test@gmail.com",
+      "password": "123",
+      "id": "jHTLAIBDNMA"
+    },
+    {
+      "username": "qwert",
+      "email": "wert@gmail.com",
+      "password": "12345",
+      "id": "ebel0XLt3H8"
+    },
+    {
+      "username": "abc",
+      "email": "abc@gmail.com",
+      "password": "123",
+      "id": "4ykv8n52fA0"
+    },
+    {
+      "username": "qwert",
+      "email": "wert@mao.com",
+      "password": "34567",
+      "id": "VDTv9SP8p88"
+    },
+    {
+      "username": "bb",
+      "email": "nn@gmai.consd",
+      "password": "y78y78",
+      "id": "XK1txsm0OAQ"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -4,7 +4,6 @@ import Sorting from "../components/Sorting";
 import Pagination from "../components/Pagination";
 import { usePosts } from "../hooks/usePosts";
 import { useDebounce } from "../hooks/useDebounce";
-import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const [query, setQuery] = useState("");
@@ -24,8 +23,6 @@ const Dashboard = () => {
             Manage and explore posts efficiently
           </p>
         </div>
-
-       
       </header>
 
       {/* CONTROLS */}

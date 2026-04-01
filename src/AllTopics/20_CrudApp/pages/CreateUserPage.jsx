@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const CreateUserPage = () => {
   const [formData, setFormData] = useState({
@@ -12,30 +14,16 @@ const CreateUserPage = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const navigate = useNavigate();
+
   const handleCreateUser = async (e) => {
     e.preventDefault();
     console.log(formData);
-
     try {
-      //! using fetch method
-      let resp = await fetch("http://localhost:9000/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      //! USING AXIOS
+      let resp = await axios.post("http://localhost:9000/users", formData);
       console.log(resp);
-
-      {
-        /*
-    ! using axios
-    
-    let resp = await axios.post("http://localhost:9000/users" , formData);
-    console.log(resp)
-        
-    */
-      }
+      navigate("/all-users");
     } catch (error) {
       console.log(error);
     }
@@ -48,7 +36,7 @@ const CreateUserPage = () => {
       </header>
 
       <article>
-        <form onSubmit={handleCreateUser}>
+        <form>
           <div>
             <label htmlFor="username">Username</label>
             <input
@@ -83,7 +71,9 @@ const CreateUserPage = () => {
             />
           </div>
           <div>
-            <button>Create</button>
+            <button type="button" onClick={handleCreateUser}>
+              Create
+            </button>
           </div>
         </form>
       </article>
