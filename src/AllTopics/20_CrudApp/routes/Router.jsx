@@ -5,6 +5,7 @@ import Dashboard from "../pages/Dashboard";
 import PrivateRoute from "./PrivateRoute";
 import CreateUserPage from "../pages/CreateUserPage";
 import AllUsersPage from "../pages/AllUsersPage";
+import EditUserPage from "../pages/EditUserPage";
 
 export const myRoutes = createBrowserRouter([
   {
@@ -39,6 +40,15 @@ export const myRoutes = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: "/edit-user/:id", // dynamic route
+        element: (
+          <PrivateRoute>
+            <EditUserPage />
+          </PrivateRoute>
+        ),
+      },
+      
     ],
   },
 ]);

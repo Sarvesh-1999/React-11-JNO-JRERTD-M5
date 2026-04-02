@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-const CreateUserPage = () => {
+const EditUserPage = () => {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -16,30 +16,47 @@ const CreateUserPage = () => {
   };
 
   const navigate = useNavigate();
+  const params = useParams();
 
-  const handleCreateUser = async (e) => {
+  async function getEditUser() {
+    try {
+      let resp = await axios.get(`http://localhost:9000/users/${params.id}`);
+      console.log(resp);
+      setFormData(resp.data);
+    } catch (error) {
+      console.log(error);
+      toast.error("something went wrong");
+    }
+  }
+
+  useEffect(() => {
+    getEditUser();
+  }, []);
+
+  const handleUpdateUser = async (e) => {
     e.preventDefault();
     console.log(formData);
     try {
-      //! USING AXIOS
-      let resp = await axios.post("http://localhost:9000/users", formData);
-      console.log(resp);
-      toast.success("User Created");
+      let res = await axios.put(
+        `http://localhost:9000/users/${params.id}`,
+        formData,
+      );
+      toast.success("User updated");
       navigate("/all-users");
     } catch (error) {
       console.log(error);
-      toast.error("Unable to create");
+      toast.error("Unable to update");
     }
   };
 
   return (
     <section className="pt-20 px-4 min-h-screen bg-gray-100">
       <header>
-        <h1>Create User Form</h1>
+        <h1>Edit User</h1>
       </header>
 
       <article>
-        <form>
+        <form onSubmit={handleUpdateUser}>
           <div>
             <label htmlFor="username">Username</label>
             <input
@@ -74,9 +91,7 @@ const CreateUserPage = () => {
             />
           </div>
           <div>
-            <button type="button" onClick={handleCreateUser}>
-              Create
-            </button>
+            <button>Update</button>
           </div>
         </form>
       </article>
@@ -84,4 +99,4 @@ const CreateUserPage = () => {
   );
 };
 
-export default CreateUserPage;
+export default EditUserPage;

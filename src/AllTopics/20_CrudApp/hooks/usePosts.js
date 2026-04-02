@@ -3,7 +3,6 @@ import { BASE_URL, LIMIT } from "../constant";
 
 export const usePosts = ({ query, sortBy, skip }) => {
   const [posts, setPosts] = useState([]);
-  
   const [loading, setLoading] = useState(false);
 
   async function getPosts() {
@@ -14,6 +13,7 @@ export const usePosts = ({ query, sortBy, skip }) => {
     if (query) {
       URL = `${BASE_URL}/posts/search?q=${query}&limit=${LIMIT}&skip=${skip}`;
     }
+    
     try {
       let resp = await fetch(URL);
       let data = await resp.json();

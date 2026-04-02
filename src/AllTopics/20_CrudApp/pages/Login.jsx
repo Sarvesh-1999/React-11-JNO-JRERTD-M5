@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const [form, setForm] = useState({
@@ -17,11 +18,12 @@ const Login = () => {
   const handleForm = (e) => {
     e.preventDefault();
     let payload = {
-      email: form.email.trim(), 
+      email: form.email.trim(),
       password: form.password.trim(),
     };
     console.log(payload);
     sessionStorage.setItem("token", Date.now());
+    toast.success("Logged in");
     navigate("/");
   };
 
@@ -35,7 +37,7 @@ const Login = () => {
           <input
             type="email"
             name="email"
-            id="email"   
+            id="email"
             placeholder="Enter Email"
             required
             value={form.email}
