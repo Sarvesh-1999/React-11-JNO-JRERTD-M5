@@ -46,24 +46,40 @@ const AllUsersPage = () => {
   }
 
   return (
-    <section className="pt-20">
+    <section className="max-w-3xl mx-auto pt-20 px-4">
       {allUsers.length === 0 ? (
-        <p>No users available</p>
+        <p className="text-center text-gray-500 text-lg">No users available</p>
       ) : (
         allUsers.map((user) => {
           return (
-            <div key={user.id}>
-              <p>
-                <strong>Username :</strong>
+            <div
+              key={user.id}
+              className="bg-white rounded-xl shadow-md p-5 mb-5 transition hover:shadow-lg "
+            >
+              <p className="text-gray-700 text-sm mb-1">
+                <span className="font-semibold text-gray-900">Username:</span>{" "}
                 {user.username}
               </p>
-              <p>
-                <strong>Email :</strong>
+
+              <p className="text-gray-700 text-sm">
+                <span className="font-semibold text-gray-900">Email:</span>{" "}
                 {user.email}
               </p>
-              <div>
-                <Link to={`/edit-user/${user.id}`}>Edit</Link>
-                <button onClick={() => deleteUser(user.id)}>Delete</button>
+
+              <div className="mt-4 flex gap-3">
+                <Link
+                  to={`/edit-user/${user.id}`}
+                  className="px-4 py-1.5 text-sm rounded-md bg-green-500 text-white hover:bg-green-600 transition"
+                >
+                  Edit
+                </Link>
+
+                <button
+                  onClick={() => deleteUser(user.id)}
+                  className="px-4 py-1.5 text-sm rounded-md bg-red-500 text-white hover:bg-red-600 transition"
+                >
+                  Delete
+                </button>
               </div>
             </div>
           );

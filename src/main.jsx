@@ -1,5 +1,6 @@
 //! REACT WAY
 import { createRoot } from "react-dom/client";
+import CodeSplittingExample from "./AllTopics/21_CodeSplitting/CodeSplittingExample";
 import App from "./App";
 
 // global css
